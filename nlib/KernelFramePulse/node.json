@@ -1,0 +1,31 @@
+{
+	"category": "Kernel",
+	"name": "KernelFramePulse",
+	"inputs": 0,
+	"outputs": 0,
+	"parameters": [
+		{
+			"name": "pinIndicator",
+			"type": "raw",
+			"default": "LED",
+			"options": [
+				""
+			],
+			"value": "LED1"
+		}
+	],
+	"labels": {
+		"input": [],
+		"output": []
+	},
+	"schematic_pins": {
+		"inputs": [
+			0
+		],
+		"outputs": [
+			0
+		]
+	},
+	"repository": "https://github.com/nBlocksStudioNodes/nblocks_kernelframepulse/blob/main/kernelframepulse.cpp",
+	"revision": ""
+}

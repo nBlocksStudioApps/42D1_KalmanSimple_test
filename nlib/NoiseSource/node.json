@@ -1,0 +1,49 @@
+{
+    "category": "Math",
+    "name": "NoiseSource",
+    "inputs": 1,
+    "outputs": 1,
+    "parameters": [
+        {
+            "name": "min",
+            "type": "raw",
+            "default": "0.0",
+            "options": [
+                ""
+            ],
+            "value": "0.0"
+        },
+        {
+            "name": "max",
+            "type": "raw",
+            "default": "1.0",
+            "options": [
+                ""
+            ],
+            "value": "1.0"
+        },
+        {
+            "name": "seed",
+            "type": "int",
+            "default": 8,
+            "options": [
+                ""
+            ],
+            "value": 8
+        }
+    ],
+    "labels": {
+        "input": [],
+        "output": []
+    },
+    "schematic_pins": {
+        "inputs": [
+            1
+        ],
+        "outputs": [
+            2
+        ]
+    },
+    "repository": "https://github.com/nBlocksStudioApps/nblocks_noisesource",
+    "revision": ""
+}

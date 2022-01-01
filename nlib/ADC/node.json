@@ -1,0 +1,44 @@
+
+{
+    "category": "Input",
+    "name": "ADC",
+    "inputs": 1,
+    "outputs": 1,
+    "parameters": [
+        {
+            "name": "pinADC",
+            "type": "raw",
+            "default": "p21",
+            "options": [
+                ""
+            ],
+            "value": "p21"
+        },
+        {
+            "name": "data_type",
+            "type": "option",
+            "default": "OUTPUT_TYPE_FLOAT",
+            "options": [
+                "OUTPUT_TYPE_FLOAT\r",
+                "OUTPUT_TYPE_INT\r",
+                "\r",
+                "\r",
+                "\r",
+                ""
+            ],
+            "value": "OUTPUT_TYPE_FLOAT"
+        }
+    ],
+    "labels": {
+        "input": [],
+        "output": []
+    },
+    "schematic_pins": {
+        "inputs": [
+            1
+        ],
+        "outputs": [
+            2
+        ]
+    }
+}

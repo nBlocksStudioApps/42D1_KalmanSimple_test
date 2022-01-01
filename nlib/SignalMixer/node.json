@@ -1,0 +1,61 @@
+{
+    "category": "Math",
+    "name": "SignalMixer",
+    "inputs": 4,
+    "outputs": 1,
+    "parameters": [
+        {
+            "name": "ratio1",
+            "type": "raw",
+            "default": "0.25",
+            "options": [
+                ""
+            ],
+            "value": "0.25"
+        },
+        {
+            "name": "ratio2",
+            "type": "raw",
+            "default": "0.25",
+            "options": [
+                ""
+            ],
+            "value": "0.25"
+        },
+        {
+            "name": "ratio3",
+            "type": "raw",
+            "default": "0.25",
+            "options": [
+                ""
+            ],
+            "value": "0.25"
+        },
+        {
+            "name": "ratio4",
+            "type": "raw",
+            "default": "0.25",
+            "options": [
+                ""
+            ],
+            "value": "0.25"
+        }
+    ],
+    "labels": {
+        "input": [],
+        "output": []
+    },
+    "schematic_pins": {
+        "inputs": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "outputs": [
+            5
+        ]
+    },
+    "repository": "https://github.com/nBlocksStudioNodes/SignalMixer",
+    "revision": ""
+}

@@ -1,0 +1,40 @@
+{
+	"category": "Hardware",
+	"name": "StringSerial",
+	"inputs": 1,
+	"outputs": 1,
+	"parameters": [
+		{
+			"name": "Pin TX",
+			"type": "raw",
+			"default": "P2_0",
+			"options": [
+				""
+			],
+			"value": "P2_0"
+		},
+		{
+			"name": "Pin RX",
+			"type": "raw",
+			"default": "P2_1",
+			"options": [
+				""
+			],
+			"value": "P2_1"
+		}
+	],
+	"labels": {
+		"input": ["Text"],
+		"output": ["Char"]
+	},
+	"schematic_pins": {
+		"inputs": [
+			1
+		],
+		"outputs": [
+			2
+		]
+	},
+	"repository": "https://github.com/nblocksStudio/nblocks_stringserial",
+	"revision": ""
+}

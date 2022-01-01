@@ -11,7 +11,7 @@ With scope to import an existing [nBlocksStudio](https://github.com/nblocksStudi
 ## The problem
 [nBlocksStudio](https://github.com/nblocksStudio/nblocksStudio.github.io) repositories contain git controlled sub-directories for the libraries. The project tree is created automatically from the [nBlocksStudio](https://github.com/nblocksStudio/nblocksStudio.github.io) translator.
 
-[nBlocksStudio](https://github.com/nblocksStudio/nblocksStudio.github.io) translator does not create/manage git sub-modules, so when the local repo is pushed to a remote git repo, the remote libraries sub-directories are empty. 
+[nBlocksStudio](https://github.com/nblocksStudio/nblocksStudio.github.io) translator does not create/manage [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), so when the local repo is pushed to a remote git repo, the remote libraries sub-directories are empty. 
 > to review:
  Manually managing multiple [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) takes time and is error-prone 
 
@@ -23,7 +23,7 @@ As result when the repo is cloned from github, the library sub-directories have 
 ## A tested solution
 
 Note the existence of `.git` sub-directory. 
-This is what we want to remove from all sub-directories under `nLib` sub-directory
+This is what we want to remove from all sub-directories under `nlib` sub-directory
 
 <p align="center">
 <img
@@ -62,13 +62,14 @@ width = 800
 
 ----
 
-### Importing to keil-studio
-* Create a new blink [Keil Studio](https://www.keil.arm.com/) project: 
+### Importing to Keil-studio
+* Create a new  [Keil Studio](https://www.keil.arm.com/) project:
+  * Use the blinky project example 
   * mbed-os5
   * bare metal
-* Remove main and readme.md
-* Drag  from the local repo 
-  * nLib
+* Remove `main.c` and `readme.md` files, from the newly created project
+* **Drag...**  from the local repo 
+  * nlib
   * README.md 
   * main.cpp
 <p align="center">
@@ -78,7 +79,7 @@ width = 400
 />
 </p>
 
-* Drop to the created keil-studio project
+* **...& Drop**  to the created Keil-Studio project
 <p align="center">
 <img
 src="img/05.PNG"
@@ -96,7 +97,7 @@ width = 900
 </p>
 
 
-updated `#indlude` without the path
+Below: updated `#indlude` without the path
 <p align="center">
 <img
 src="img/09.PNG"
@@ -104,7 +105,7 @@ width = 900
 />
 </p>
 
-* Finally, compile without errors 
+* Finally: compile without errors and ...
 
 <p align="center">
 <img
@@ -113,7 +114,7 @@ width = 900
 />
 </p>
 
-* and download the compiled binary, to flash the target Microcontroller.
+* Download the compiled binary, to flash the target Microcontroller.
 <p align="center">
 <img
 src="img/10.PNG"

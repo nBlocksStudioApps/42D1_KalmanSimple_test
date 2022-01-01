@@ -6,25 +6,25 @@ An experimental repository for 42D:
 
 > A schematic Design for Testing the Node [KalmanSimple](https://github.com/nBlocksStudioNodes/nblocks_kalmansimple) and [42D_KalmanSimple_test_SCH](https://github.com/nBlocksStudioApps/42D_KalmanSimple_test_SCH)
 
-With scope to import an existing nBlocksStudio project to the new (December 2021) cloud-based keil-studio, which replaces both mbed-online-compiler and mbed-studio IDE
+With scope to import an existing [nBlocksStudio](https://github.com/nblocksStudio/nblocksStudio.github.io) project to the new (December 2021) [Keil Studio Cloud](https://www.keil.arm.com/), which replaces both [mbed-online-compiler](https://os.mbed.com/handbook/mbed-Compiler) and [mbed-studio](https://os.mbed.com/studio/) IDE
 
 ## The problem
-nBlocksStudio repositories contain git controlled sub-directoreis for the libraries. The project tree is created automatically from the nBlocksStudio translator.
+[nBlocksStudio](https://github.com/nblocksStudio/nblocksStudio.github.io) repositories contain git controlled sub-directories for the libraries. The project tree is created automatically from the [nBlocksStudio](https://github.com/nblocksStudio/nblocksStudio.github.io) translator.
 
-nBlocksStudio translator does not create/manage git sub-modules, so when the local repo is pushed to a remote git repo, the remote libraries sub-directories are empty. 
-> [to review] Manually managing multiple submodules takes time and is error-prone 
+[nBlocksStudio](https://github.com/nblocksStudio/nblocksStudio.github.io) translator does not create/manage git sub-modules, so when the local repo is pushed to a remote git repo, the remote libraries sub-directories are empty. 
+> to review:
+ Manually managing multiple [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) takes time and is error-prone 
 
+As result when the repo is cloned from github, the library sub-directories have no content. 
 
-As result when the repo is cloned from github, the library subfolders have no content. 
-
-
-> [to review ] For importing to keil-studio, even if the submoules were properly managed, the library subfolders can't be imported!!!
+> to review: For importing to [Keil Studio](https://www.keil.arm.com/), even if the submoules were properly managed, the library subfolders can't be imported!!!
 
 
 ## A tested solution
 
 Note the existence of `.git` sub-directory. 
-This is what we want to remove from all sub-directories under nLib sub-directory
+This is what we want to remove from all sub-directories under `nLib` sub-directory
+
 <p align="center">
 <img
 src="img/03.PNG"
@@ -32,8 +32,7 @@ width = 900
 />
 </p>
 
-
-We first copy the nBlockStudio repo locally to a new one, omitting the huge `mbed-os` sub-directory.  
+We first copy the [nBlocksStudio](https://github.com/nblocksStudio/nblocksStudio.github.io) repo locally to a new one, omitting the huge `mbed-os` sub-directory.  
 Then we add the `removeGit.cmd` DOS batch-file to the project-repo-root and we run it.
 <p align="center">
 <img
@@ -43,7 +42,6 @@ width = 800
 </p>
 
 The .git subdirectories are removed from **all**  sub-directories
-
 
 <p align="center">
 <img
@@ -65,7 +63,7 @@ width = 800
 ----
 
 ### Importing to keil-studio
-* Create a new blink keil-studio project: 
+* Create a new blink [Keil Studio](https://www.keil.arm.com/) project: 
   * mbed-os5
   * bare metal
 * Remove main and readme.md
@@ -88,8 +86,8 @@ width = 400
 />
 </p>
 
+* Compile and Update `#indlude` path errors, since `mbed-studio` needs the full path for the `#indlude` files, and [Keil Studio](https://www.keil.arm.com/) needs only the library files without the path.
 
-* Compile and Update `#indlude` path errors, since mbed-studio needed the full path for the `#indlude` files and keil studio needs only the library files without the path.
 <p align="center">
 <img
 src="img/08.PNG"
